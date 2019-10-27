@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/everyWord"
+                android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/period_repeat_event_edit_text"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:layout_marginStart="10dp"
+                    android:text="10"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/type_repeat_time_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Дней"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:id="@+id/type_repeat_time_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:progress="2"
+                android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:id="@+id/set_repeat_time_only_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/separator"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/onlyTime" />
+
+                <LinearLayout
+                    android:id="@+id/set_repeat_time_only_days_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ПН"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ВТ"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="СР"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ЧТ"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ПТ"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="СБ"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ВС"
+                        android:onClick="editRereatedDayOfWeak"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/set_repeat_time_only_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/separator"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onlyTime"
+                    android:layout_margin="10dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/only_times_start_interval"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="9:00"
+                        android:onClick="setOnlyTimesInterval"
+                        android:padding="8dp"
+                        android:layout_margin="0dp"
+                        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+                    <TextView
+                        android:id="@+id/only_times_end_interval"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="0dp"
+                        android:onClick="setOnlyTimesInterval"
+                        android:padding="8dp"
+                        android:layout_margin="0dp"
+                        android:text="22:00"
+                        style="@style/Widget.AppCompat.Button.Borderless" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/separator"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/endWord"
+                android:layout_margin="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/type_repeat_event_never"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <RadioButton
+                    android:id="@+id/type_repeat_event_never_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Никогда" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/type_repeat_event_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <RadioButton
+                    android:id="@+id/type_repeat_event_date_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="до " />
+
+                <TextView
+                    android:id="@+id/type_repeat_event_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/type_repeat_event_date_radio"
+                    android:gravity="center_vertical"
+                    android:text="31.12.2018"
+                    android:textColor="@android:color/black"
+                    android:onClick="setEndOfRepeatDate"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/type_repeat_event_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <RadioButton
+                    android:id="@+id/type_repeat_event_times_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="После " />
+
+                <EditText
+                    android:id="@+id/type_repeat_event_times_number"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/type_repeat_event_times_radio"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/type_repeat_event_times_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/type_repeat_event_times_number"
+                    android:gravity="center_vertical"
+                    android:text=" повторов"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSecondaryBackground"
+        tools:context=".MainActivity">
+
+        <!--#bcaaa4ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_background_image"
+            android:scaleType="centerCrope4e4e4"/-->
+
+        <RelativeLayout
+            android:id="@+id/top_redact_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:translationZ="4dp">
+
+            <ImageButton
+                style="@style/ButtonClear"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:onClick="openNavigationview"
+                app:srcCompat="@drawable/ic_dehaze_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:id="@+id/emit_top_panel"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp">
+
+                <ImageButton
+                    style="@style/ButtonClear"
+                    android:id="@+id/clear_button"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@+id/delete_button"
+                    android:onClick="ClearEmitKeeps"
+                    app:srcCompat="@drawable/ic_check_box_outline_blank_white_24dp" />
+
+                <ImageButton
+                    style="@style/ButtonClear"
+                    android:id="@+id/delete_button"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:onClick="DeleteEmitKeeps"
+                    app:srcCompat="@drawable/ic_delete_white_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:id="@+id/clasic_top_panel"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp">
+
+                <EditText
+                    android:id="@+id/searched_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@+id/search_button"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:visibility="gone"
+                    android:background="@color/colorWhiteKeep"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/search_button"
+                    style="@style/ButtonClear"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:onClick="searchKeep"
+                    app:srcCompat="@drawable/ic_search_black_24dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/createKeep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/top_redact_menu"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:background="@drawable/material_secondary"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="1dp"
+            android:translationZ="1dp"
+            android:padding="4dp"
+            android:foreground="#0000"
+            android:onClick="toCreateKeep">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toCreateKeep"
+                android:text="@string/createKeepText"
+                android:textAlignment="textStart"
+                android:layout_margin="4dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:onClick="toCreateKeep"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                app:srcCompat="@android:drawable/ic_menu_edit"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/myview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/createKeep">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="68dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <LinearLayout
+                    android:id="@+id/first_col"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_col"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:translationZ="24dp" />
+
+</android.support.v4.widget.DrawerLayout>

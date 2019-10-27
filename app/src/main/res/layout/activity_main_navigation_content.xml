@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/sing_in_text">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/to_profile"
+            android:id="@+id/sing_in"
+            android:onClick="singIn"
+            style="@style/ButtonClear"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/allKeeps"
+        android:id="@+id/all_keeps"
+        android:onClick="allKeeps"
+        style="@style/ButtonClear"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/todayKeeps"
+        android:id="@+id/today_keeps"
+        android:onClick="todayKeeps"
+        style="@style/ButtonClear"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tomorowKeeps"
+        android:id="@+id/tomorow_keeps"
+        android:onClick="tomorowKeeps"
+        style="@style/ButtonClear"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мероприятия с "
+            android:paddingStart="4dp"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="11:12"
+            style="@style/ButtonClear"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" по "
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="21:12"
+            style="@style/ButtonClear"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/colorsOnlyKeeps"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="8dp"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/whiteKeeps"
+        android:id="@+id/only_white"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/redKeeps"
+        android:id="@+id/only_red"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/orangeKeeps"
+        android:id="@+id/only_orange"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yellowKeeps"
+        android:id="@+id/only_yellow"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greenKeeps"
+        android:id="@+id/only_green"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lightBlueKeeps"
+        android:id="@+id/only_light_blue"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/blueKeeps"
+        android:id="@+id/only_blue"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/purpurKeeps"
+        android:id="@+id/only_purpur"
+        android:checked="true"
+        android:textSize="18sp"
+        android:onClick="ChangeOnly"/>
+
+</LinearLayout>

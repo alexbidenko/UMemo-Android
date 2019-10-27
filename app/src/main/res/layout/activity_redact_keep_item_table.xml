@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/parent_layout">
+
+    <CheckBox
+        android:id="@+id/is_check"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-6dp"
+        android:visibility="gone"
+        android:onClick="ChangeCheck"/>
+
+    <EditText
+        android:id="@+id/item_table_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="26dp"
+        android:ems="10"
+        android:inputType="textCapSentences|textMultiLine|text"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/item_table_params"
+        style="@style/ButtonClear"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/ic_grain_black_24dp" />
+
+</RelativeLayout>

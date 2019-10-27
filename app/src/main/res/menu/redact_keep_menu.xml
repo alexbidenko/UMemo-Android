@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RedactKeep">
+
+    <item
+        android:orderInCategory="30"
+        android:title="@string/shareButton"
+        android:id="@+id/share_button"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider">
+    </item>
+
+    <item
+        android:orderInCategory="50"
+        android:title="@string/create_table_menu_item"
+        android:onClick="createTable" />
+
+    <item
+        android:orderInCategory="55"
+        android:id="@+id/make_check"
+        android:title="@string/make_check"
+        android:visible="false"
+        android:onClick="makeCheck" />
+
+    <item
+        android:orderInCategory="60"
+        android:title="@string/add_style_keep"
+        android:onClick="addStyleKeepDialog" />
+
+    <item
+        android:orderInCategory="90"
+        android:title="@string/make_copy_keep"
+        android:onClick="MakeCopyKeep" />
+
+    <item
+        android:orderInCategory="100"
+        android:title="@string/deleteKeepTextButton"
+        android:onClick="deleteKeep" />
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4a148c</color>
+    <color name="colorPrimaryDark">#12005e</color>
+    <color name="colorPrimaryLight">#7c43bd</color>
+    <color name="colorSecondary">#757575</color>
+    <color name="colorSecondaryDark">#494949</color>
+    <color name="colorSecondaryLight">#a4a4a4</color>
+    <color name="colorAccent">#757575</color>
+    <!--color name="colorAccent">#D81B60</color-->
+    <color name="colorSecondaryBackground">#e7e7e7</color>
+
+    <color name="colorWhiteKeep">#ffffff</color>
+    <color name="colorRedKeep">#ff6f6f</color>
+    <color name="colorOrangeKeep">#ffb443</color>
+    <color name="colorYellowKeep">#ffff00</color>
+    <color name="colorGreenKeep">#44ff53</color>
+    <color name="colorLightBlueKeep">#29eaff</color>
+    <color name="colorBlueKeep">#605bff</color>
+    <color name="colorPurpurKeep">#eb66ff</color>
+    <color name="colorFuchsiaKeep">#ff38ff</color>
+
+    <color name="colorZDefaultText">#000</color>
+    <color name="colorZCheckedText">#aaa</color>
+</resources>

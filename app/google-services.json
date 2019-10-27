@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "787309565799",
+    "firebase_url": "https://istikers.firebaseio.com",
+    "project_id": "istikers",
+    "storage_bucket": "istikers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787309565799:android:6a17d04979747b76",
+        "android_client_info": {
+          "package_name": "com.service.istikers.alexander.istikers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787309565799-edthkre1bl97d8oj3d6649ap2ciepbi0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.service.istikers.alexander.istikers",
+            "certificate_hash": "b71eb58c58875ca624fc7795bec7b3840a78aa91"
+          }
+        },
+        {
+          "client_id": "787309565799-669cg0u6ogvsc72ohachbc5eruiueqjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpiO907xbLnMHp77ekS6gltXUbH8jhUk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787309565799-669cg0u6ogvsc72ohachbc5eruiueqjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

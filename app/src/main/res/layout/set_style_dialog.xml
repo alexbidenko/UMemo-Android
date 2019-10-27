@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/selectedKeepColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/celectetKeepColor"
+        android:textAlignment="center"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/colorWhiteKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorWhiteKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorRedKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorRedKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorOrangeKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorOrangeKeep"
+            android:elevation="5dp"/>
+
+        <TextView
+            android:id="@+id/colorYellowKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorYellowKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorGreenKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorGreenKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorLightBlueKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorLightBlueKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorBlueKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorBlueKeep"
+            android:elevation="5dp" />
+
+        <TextView
+            android:id="@+id/colorPurpurKeep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:onClick="selectColorKeep"
+            android:background="@color/colorPurpurKeep"
+            android:elevation="5dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator"/>
+
+    <TextView
+        android:id="@+id/font_family"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_margin="10dp"
+        android:text="Sans-Serif"
+        android:onClick="setFontFamily"
+        android:gravity="center_vertical"/>
+
+    <SeekBar
+        android:id="@+id/text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="32"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator"/>
+
+</LinearLayout>

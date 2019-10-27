@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmClock"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:background="@color/colorPrimaryLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/material_primary"
+        android:elevation="1dp"
+        android:translationZ="1dp"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title_keep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UMemo напоминает!"
+            android:textSize="34sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteKeep"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/material_primary"
+        android:elevation="1dp"
+        android:translationZ="1dp"
+        android:layout_margin="8dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:onClick="wakeUp"
+            android:text="Выключить"
+            style="@style/ButtonClear"
+            android:textColor="@color/colorWhiteKeep"
+            android:paddingStart="16dp"
+            android:background="@drawable/alarm_clock_ring"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/now_time"
+            android:text="20:00"
+            android:textSize="60sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteKeep"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отложить на"
+                android:textSize="18sp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorWhiteKeep"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="минут"
+                android:textSize="18sp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorWhiteKeep"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/holdower_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"
+                android:textAlignment="center"
+                style="@style/ButtonClear"
+                android:onClick="retimeAlarm"
+                android:textColor="@color/colorWhiteKeep"
+                android:background="@drawable/alarm_clock_ring"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/holdower_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10"
+                android:textAlignment="center"
+                style="@style/ButtonClear"
+                android:onClick="retimeAlarm"
+                android:textColor="@color/colorWhiteKeep"
+                android:background="@drawable/alarm_clock_ring"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/holdower_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15"
+                android:textAlignment="center"
+                style="@style/ButtonClear"
+                android:onClick="retimeAlarm"
+                android:textColor="@color/colorWhiteKeep"
+                android:background="@drawable/alarm_clock_ring"
+                android:layout_margin="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/text_keep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Текст вашей мотивирующей заметки, которая поднимет вас с кровати!"
+            android:textSize="24sp"
+            android:textColor="@color/colorWhiteKeep"
+            android:background="@drawable/material_primary"
+            android:elevation="1dp"
+            android:translationZ="1dp"
+            android:layout_margin="8dp"
+            android:padding="16dp"/>
+
+    </ScrollView>
+
+</LinearLayout>
